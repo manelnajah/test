@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true"
+    app:cardCornerRadius="12dp"
+    android:background="@color/white">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="12dp">
+
+        <!-- Nom du contact -->
+        <TextView
+            android:id="@+id/tvName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Nom"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
+
+        <!-- Numéro du contact -->
+        <TextView
+            android:id="@+id/tvPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvName"
+            android:layout_marginTop="4dp"
+            android:text="Téléphone"
+            android:textColor="@color/white"/>
+
+        <!-- Bouton Appeler -->
+        <ImageButton
+            android:id="@+id/btnCall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_call"
+            android:contentDescription="Appeler"/>
+
+        <!-- Bouton SMS -->
+        <ImageButton
+            android:id="@+id/btnSms"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/btnCall"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_dialog_email"
+            android:contentDescription="Envoyer SMS"/>
+
+        <!-- Bouton Supprimer -->
+        <ImageButton
+            android:id="@+id/btnDelete"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_toStartOf="@id/btnSms"
+            android:layout_marginEnd="8dp"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_delete"
+            android:contentDescription="Supprimer"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
